@@ -6,10 +6,12 @@ class MessageForm extends Component {
       super(props);
       this.state = {
           message: ""
-      }
+      };
+      this.handleMessageChange = this.handleMessageChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-//   when a message is created and sent it takes state from App.js and sends to database 
+
 
 }
 
