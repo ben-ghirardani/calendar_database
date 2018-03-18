@@ -6,11 +6,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date()
+      date: new Date(),
+      day: "",
+      month: "",
+      dayNum: "",
+      year: ""
     }
   }
 
-  onChange = date => this.setState({ date })
+  onChange = date => this.setState({ 
+    date,
+    day: date.toString().slice(0, 3),
+    month: date.toString().slice(4, 7),
+    dayNum: date.toString().slice(8, 10),
+    year: date.toString().slice(11, 15)
+   })
 
   formatDateString(dateString){
     let newFormat = dateString.toString().slice(0, 15);
