@@ -12,6 +12,11 @@ class App extends Component {
 
   onChange = date => this.setState({ date })
 
+  formatDateString(dateString){
+    let newFormat = dateString.toString().slice(0, 15);
+    return newFormat;
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,6 +25,9 @@ class App extends Component {
             onChange={this.onChange}
             value={this.state.date}
           />
+          <div className="date-string">
+            {this.formatDateString(this.state.date)}
+          </div>
       </div>
     );
   }
