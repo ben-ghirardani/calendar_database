@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar';
+import MessageForm from './MessageForm';
 
 class App extends Component {
 
@@ -38,6 +39,7 @@ class App extends Component {
           <div className="date-string">
             {this.formatDateString(this.state.date)}
           </div>
+          <MessageForm/>
       </div>
     );
   }
