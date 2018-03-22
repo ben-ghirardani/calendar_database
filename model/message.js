@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// new instance of mongoose.schema, which takes an object that shows the shape of a database entry
+// new instance of mongoose.schema, takes an object showing  db entry format
 var MessageSchema = new Schema({
     day: String,
     month: String,
@@ -13,4 +13,4 @@ var MessageSchema = new Schema({
     amount: Number
 })
 
-module.exports = mongoose.model('')
+module.exports = mongoose.model('Message, MessageSchema');

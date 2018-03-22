@@ -1,3 +1,5 @@
+to run: "npm run start" in one terminal window, "nodemon server.js" in another 
+
 create-react-app
 npm install react-calendar
 
@@ -10,3 +12,5 @@ Foreman: allows us to boot up our API and webpack-dev-server simultaneously.
 Nodemon: watches our server.js file for changes, then restarts it.
 Marked: to convert markdown syntax to html. I used this in place of Remarkable (which the FB tutorial uses)
 Mongoose: abstracts away the MongoDB boilerplate for a simple Schema solution.
+
+Named the db in mlab calendar_db (P: calendar_db123)
