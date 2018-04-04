@@ -23,7 +23,14 @@ class MessageForm extends Component {
 
   handleSubmit(e){
       e.preventDefault();
-      console.log("submit button was pressed")
+      let message = this.state.message.trim();
+      let amount = this.state.amount.trim();
+        if(!message || !amount) {
+          return;
+        }
+        // do I need to include all the other elements from message.js ****************
+      this.props.onCommentSubmit({message: message, amount: amount}); 
+      this.setState({message: "", amount: ""}); 
   }
 
   render() {
